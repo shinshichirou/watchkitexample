@@ -1,0 +1,155 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder.WatchKit.Storyboard" version="3.0" toolsVersion="14490.70" targetRuntime="watchKit" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="mxe-Gy-7nE">
+    <device id="watch38" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="watchOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14490.49"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBWatchKitPlugin" version="14490.21"/>
+    </dependencies>
+    <scenes>
+        <!--Static Notification Interface Controller-->
+        <scene sceneID="AEw-b0-oYE">
+            <objects>
+                <notificationController id="YCC-NB-fut">
+                    <items>
+                        <label alignment="left" text="Alert Label" numberOfLines="0" id="IdU-wH-bcW"/>
+                    </items>
+                    <notificationCategory key="notificationCategory" identifier="myCategory" id="JfB-70-Muf"/>
+                    <connections>
+                        <outlet property="notificationAlertLabel" destination="IdU-wH-bcW" id="JKC-fr-R95"/>
+                        <segue destination="4sK-HA-Art" kind="relationship" relationship="dynamicNotificationInterface" id="kXh-Jw-8B1"/>
+                        <segue destination="eXb-UN-Cd0" kind="relationship" relationship="dynamicInteractiveNotificationInterface" id="mpB-YA-K8N"/>
+                    </connections>
+                </notificationController>
+            </objects>
+            <point key="canvasLocation" x="220" y="643"/>
+        </scene>
+        <!--Notification Controller-->
+        <scene sceneID="ZPc-GJ-vnh">
+            <objects>
+                <controller id="4sK-HA-Art" customClass="NotificationController" customModule="WatchApp" customModuleProvider="target"/>
+            </objects>
+            <point key="canvasLocation" x="468" y="643"/>
+        </scene>
+        <!--main-->
+        <scene sceneID="qBA-3d-o5W">
+            <objects>
+                <controller identifier="main" id="mxe-Gy-7nE" customClass="MainInterfaceController" customModule="WatchApp_Extension">
+                    <items>
+                        <label alignment="left" text="How many exercises do you want?" textAlignment="center" numberOfLines="3" id="Pa8-EW-42E"/>
+                        <group width="1" alignment="center" spacing="4" id="dQ4-PB-2ud">
+                            <items>
+                                <button width="44" alignment="left" verticalAlignment="center" title="-" id="gMz-83-9TK">
+                                    <connections>
+                                        <action selector="minusPressed" destination="mxe-Gy-7nE" id="prL-fh-RKE"/>
+                                    </connections>
+                                </button>
+                                <label alignment="center" verticalAlignment="center" text="1" id="cRt-tb-Avg">
+                                    <fontDescription key="font" style="UICTFontTextStyleHeadline"/>
+                                </label>
+                                <button width="44" alignment="right" verticalAlignment="center" title="+" id="kyf-zM-MYK">
+                                    <connections>
+                                        <action selector="plusPressed" destination="mxe-Gy-7nE" id="IUt-jj-zCX"/>
+                                    </connections>
+                                </button>
+                            </items>
+                            <edgeInsets key="margins" left="0.0" right="0.0" top="8" bottom="8"/>
+                        </group>
+                        <button width="1" alignment="left" title="Add" id="EyL-Xb-dhh">
+                            <connections>
+                                <action selector="addPressed" destination="mxe-Gy-7nE" id="odD-gs-EjX"/>
+                            </connections>
+                        </button>
+                    </items>
+                    <connections>
+                        <outlet property="countLabel" destination="cRt-tb-Avg" id="lQT-VT-y2l"/>
+                    </connections>
+                </controller>
+            </objects>
+            <point key="canvasLocation" x="468" y="-5"/>
+        </scene>
+        <!--list-->
+        <scene sceneID="pQA-iR-9fU">
+            <objects>
+                <controller identifier="list" id="uu0-NQ-pIU" customClass="ExercisesInterfaceController" customModule="WatchApp_Extension">
+                    <items>
+                        <table alignment="center" id="nBs-Up-vFa">
+                            <items>
+                                <tableRow identifier="ExercisesRowController" id="dY0-8O-z48" customClass="ExercisesRowController" customModule="WatchApp_Extension">
+                                    <group key="rootItem" width="1" height="44" alignment="left" spacing="8" id="qVC-yP-qew">
+                                        <items>
+                                            <group alignment="left" radius="8" id="D60-xx-9P1">
+                                                <items>
+                                                    <imageView width="44" height="1" alignment="left" verticalAlignment="center" image="e1" contentMode="scaleAspectFit" id="TxV-7g-W6A"/>
+                                                </items>
+                                            </group>
+                                            <label width="0.59999999999999998" widthAdjustment="5" height="24" alignment="left" verticalAlignment="center" text="Label" id="AXY-IQ-YfQ">
+                                                <fontDescription key="font" style="UICTFontTextStyleHeadline"/>
+                                            </label>
+                                        </items>
+                                        <edgeInsets key="margins" left="0.0" right="0.0" top="0.0" bottom="0.0"/>
+                                    </group>
+                                    <connections>
+                                        <outlet property="imageView" destination="TxV-7g-W6A" id="erm-NH-kjL"/>
+                                        <outlet property="nameLabel" destination="AXY-IQ-YfQ" id="Pdf-8f-iM0"/>
+                                    </connections>
+                                </tableRow>
+                            </items>
+                        </table>
+                    </items>
+                    <connections>
+                        <outlet property="table" destination="nBs-Up-vFa" id="sJW-8H-5qK"/>
+                    </connections>
+                </controller>
+            </objects>
+            <point key="canvasLocation" x="749" y="-8"/>
+        </scene>
+        <!--details-->
+        <scene sceneID="vcZ-E8-96P">
+            <objects>
+                <controller identifier="details" id="3c9-JQ-2Eu" customClass="ExerciseInterfaceController" customModule="WatchApp_Extension">
+                    <items>
+                        <table alignment="center" id="90T-t4-e3a">
+                            <items>
+                                <tableRow identifier="ExerciseRowController" selectable="NO" id="Jmt-Cc-XbM" customClass="ExerciseRowController" customModule="WatchApp_Extension">
+                                    <group key="rootItem" width="1" height="0.0" alignment="left" layout="vertical" spacing="4" id="qWj-4e-Y4e">
+                                        <items>
+                                            <group alignment="left" radius="8" id="e2n-bf-UAt">
+                                                <items>
+                                                    <imageView width="1" alignment="center" image="e1" contentMode="scaleAspectFit" id="RzZ-98-g9R"/>
+                                                </items>
+                                            </group>
+                                            <label width="1" alignment="left" text="Label" numberOfLines="0" id="yRh-57-ici"/>
+                                            <separator alignment="left" id="gNB-ta-UlG">
+                                                <color key="color" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                            </separator>
+                                        </items>
+                                        <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <edgeInsets key="margins" left="0.0" right="0.0" top="4" bottom="4"/>
+                                    </group>
+                                    <connections>
+                                        <outlet property="commentLabel" destination="yRh-57-ici" id="ZLI-Ie-uem"/>
+                                        <outlet property="imageView" destination="RzZ-98-g9R" id="BNr-EN-VPj"/>
+                                    </connections>
+                                </tableRow>
+                            </items>
+                        </table>
+                    </items>
+                    <connections>
+                        <outlet property="table" destination="90T-t4-e3a" id="iIq-br-jZv"/>
+                    </connections>
+                </controller>
+            </objects>
+            <point key="canvasLocation" x="1015" y="-5"/>
+        </scene>
+        <!--Notification Controller-->
+        <scene sceneID="Niz-AI-uX2">
+            <objects>
+                <controller id="eXb-UN-Cd0" customClass="NotificationController" customModule="WatchApp" customModuleProvider="target"/>
+            </objects>
+            <point key="canvasLocation" x="468" y="345"/>
+        </scene>
+    </scenes>
+</document>
