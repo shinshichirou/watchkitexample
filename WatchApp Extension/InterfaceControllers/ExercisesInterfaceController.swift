@@ -23,7 +23,7 @@ class ExercisesInterfaceController: WKInterfaceController {
             let count = contextDictionary[WatchContextKeys.exerciseCount] as? Int else {
                 return
         }
-        setTitle("\(count) exercises")
+        setTitle("\(count) exercise(s)")
         configureTableWith(count)
     }
 
