@@ -48,9 +48,3 @@ class ExerciseInterfaceController: WKInterfaceController {
 
 }
 
-class ExerciseRowController: NSObject {
-    
-    @IBOutlet weak var imageView: WKInterfaceImage!
-    @IBOutlet weak var commentLabel: WKInterfaceLabel!
-    
-}

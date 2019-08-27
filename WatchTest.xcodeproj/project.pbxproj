@@ -36,6 +36,10 @@
 		F4344AFF23153EC000D88018 /* MainViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4344AFD23153EC000D88018 /* MainViewModel.swift */; };
 		F4344B0123153F7100D88018 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4344B0023153F7100D88018 /* Constants.swift */; };
 		F4344B0223153F7100D88018 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4344B0023153F7100D88018 /* Constants.swift */; };
+		F4D04B0D231555ED0064000A /* ExerciseRowController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4D04B0C231555ED0064000A /* ExerciseRowController.swift */; };
+		F4D04B0F231555FC0064000A /* ExercisesRowController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4D04B0E231555FC0064000A /* ExercisesRowController.swift */; };
+		F4D04B122315569B0064000A /* ExerciseRowController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4D04B0C231555ED0064000A /* ExerciseRowController.swift */; };
+		F4D04B132315569B0064000A /* ExercisesRowController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4D04B0E231555FC0064000A /* ExercisesRowController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -106,6 +110,8 @@
 		F4344AF923153BAB00D88018 /* ExerciseInterfaceController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExerciseInterfaceController.swift; sourceTree = "<group>"; };
 		F4344AFD23153EC000D88018 /* MainViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewModel.swift; sourceTree = "<group>"; };
 		F4344B0023153F7100D88018 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
+		F4D04B0C231555ED0064000A /* ExerciseRowController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExerciseRowController.swift; sourceTree = "<group>"; };
+		F4D04B0E231555FC0064000A /* ExercisesRowController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExercisesRowController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -175,6 +181,7 @@
 			children = (
 				F4344AD223152EA000D88018 /* ExtensionDelegate.swift */,
 				F4344AD423152EA000D88018 /* NotificationController.swift */,
+				F4D04B0B231555D00064000A /* RowControllers */,
 				F4344AFC23153EA100D88018 /* ViewModels */,
 				F4344AF523153B7800D88018 /* InterfaceControllers */,
 				F4344AD623152EA100D88018 /* Assets.xcassets */,
@@ -227,6 +234,15 @@
 				F4344AFD23153EC000D88018 /* MainViewModel.swift */,
 			);
 			path = ViewModels;
+			sourceTree = "<group>";
+		};
+		F4D04B0B231555D00064000A /* RowControllers */ = {
+			isa = PBXGroup;
+			children = (
+				F4D04B0C231555ED0064000A /* ExerciseRowController.swift */,
+				F4D04B0E231555FC0064000A /* ExercisesRowController.swift */,
+			);
+			path = RowControllers;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -364,6 +380,8 @@
 			files = (
 				F4344AF323153B6E00D88018 /* MainInterfaceController.swift in Sources */,
 				F4344AAE2315299900D88018 /* ViewController.swift in Sources */,
+				F4D04B132315569B0064000A /* ExercisesRowController.swift in Sources */,
+				F4D04B122315569B0064000A /* ExerciseRowController.swift in Sources */,
 				F4344AEF2315301B00D88018 /* ExerciseSet.swift in Sources */,
 				F4344AFA23153BAB00D88018 /* ExerciseInterfaceController.swift in Sources */,
 				F4344AEC23152FE400D88018 /* Exercise.swift in Sources */,
@@ -381,6 +399,8 @@
 			files = (
 				F4344AF423153B6F00D88018 /* MainInterfaceController.swift in Sources */,
 				F4344AD523152EA000D88018 /* NotificationController.swift in Sources */,
+				F4D04B0F231555FC0064000A /* ExercisesRowController.swift in Sources */,
+				F4D04B0D231555ED0064000A /* ExerciseRowController.swift in Sources */,
 				F4344AF02315301B00D88018 /* ExerciseSet.swift in Sources */,
 				F4344AFB23153BAB00D88018 /* ExerciseInterfaceController.swift in Sources */,
 				F4344AED23152FE400D88018 /* Exercise.swift in Sources */,
